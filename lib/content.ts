@@ -5,10 +5,13 @@ export const STUDIO = {
   lockup: "KUBIC STUDIO DIGITAL-FIRST DESIGN STUDIO",
   copyright: "©2026 ALL RIGHTS RESERVED",
   founded: "C.2026",
-  hero: [
-    "Vy navrhujete skvělou architekturu.",
-    "My stavíme weby, které ji konečně reflektují.",
-  ],
+  hero: {
+    lines: [
+      "Navrhujete špičkově.",
+      "My stavíme weby, které to konečně odrážejí.",
+    ],
+    subtext: "Digitální prezentace pro prémiové architektonické kanceláře.",
+  },
   since: "(SINCE 2024)",
   email: "hello@kubic.studio",
 } as const;
@@ -46,6 +49,15 @@ export const SERVICES = [
 ] as const;
 
 export const BELIEFS = {
-  statement:
-    "Jsme Studio Kubic. Sídlíme v Praze a navrhujeme weby výhradně pro architektonické kanceláře a tvoříme funkční weby tak, aby vaše portfolio prodávalo samo.",
+  badgeTitle: "Studio Kubic",
+  badgeDetail: "Praha · Architektura",
+  statement: [
+    { text: "Jsme ", emphasis: false },
+    { text: "Studio Kubic", emphasis: true },
+    { text: ". Pražské designové studio, které stojí za weby ", emphasis: false },
+    { text: "sebevědomých architektonických kanceláří", emphasis: true },
+    { text: ". Vizuální identity a kód stavíme tak, aby vaše ", emphasis: false },
+    { text: "portfolio prodávalo samo", emphasis: true },
+    { text: ".", emphasis: false },
+  ],
 } as const;
