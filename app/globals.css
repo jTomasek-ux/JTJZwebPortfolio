@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #ffffff;
+  --mist: #f4f4f4;
+  --ink: #000000;
+  --void: #111111;
+  --panel: #16171c;
+  --mint: #71f9a7;
+  --rule: #e8e8e8;
+  --mute: #9a9a9a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-mint: var(--mint);
+  --color-rule: var(--rule);
+  --color-mute: var(--mute);
+  --font-sans: var(--font-wallnutt);
+  --font-display: var(--font-wallnutt);
+  --font-nav: var(--font-neue-haas);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-wallnutt), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.nav-meta {
+  font-size: 11px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-bar {
+  font-family: var(--font-neue-haas), "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 500;
+}
+
+.display {
+  font-family: var(--font-wallnutt), sans-serif;
+  letter-spacing: -0.055em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 4px;
+}
+
+#site-menu button:focus-visible,
+#site-menu a:focus-visible {
+  outline-color: var(--paper);
 }
